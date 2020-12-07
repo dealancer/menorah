@@ -5,6 +5,8 @@ body{
 .container {
   text-align: center;
   width: 100%;
+  transform: scale(0.5);
+
 }
 
 .menorah {
