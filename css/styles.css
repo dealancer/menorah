@@ -23,6 +23,7 @@ body{
 }
 
 .light {
+  visibility: hidden;
   display: inline-block;
   margin: auto;
   width: 100px;
