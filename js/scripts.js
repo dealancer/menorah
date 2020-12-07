@@ -39,7 +39,23 @@ function light() {
     var currentTime = new Date();
     var hannukkahDay = Math.ceil((currentTime - hanukkahFirstDayTime) / 86400000);
 
-    console.log("Day " + hannukkahDay);
+    if (hannukkahDay < -1) {
+      document.getElementById("heading").innerHTML = -hannukkahDay + " days before Hanukkah.";
+    } else if (hannukkahDay == -1) {
+      document.getElementById("heading").innerHTML = -hannukkahDay + " day before Hanukkah.";
+    } else if (hannukkahDay == 0) {
+      document.getElementById("heading").innerHTML = "It is a Hanukkah eve!";
+    } else if (hannukkahDay == 1) {
+      document.getElementById("heading").innerHTML = "It is " + hannukkahDay + "st day of Hanukkah!";
+    } else if (hannukkahDay == 2) {
+      document.getElementById("heading").innerHTML = "It is " + hannukkahDay + "nd day of Hanukkah!";
+    } else if (hannukkahDay == 3) {
+      document.getElementById("heading").innerHTML = "It is " + hannukkahDay + "rd day of Hanukkah!";
+    } else if (hannukkahDay <= 8) {
+      document.getElementById("heading").innerHTML = "It is " + hannukkahDay + "th day of Hanukkah!";
+    } else {
+      document.getElementById("heading").innerHTML = "Hanukkah has ended. See you next year!";
+    }
 
     document.getElementById("one").style.visibility = "hidden";
     document.getElementById("two").style.visibility = "hidden";
