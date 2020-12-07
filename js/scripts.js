@@ -46,9 +46,9 @@ function light() {
     var hannukkahDay = Math.ceil((currentTime - hanukkahFirstDayTime) / 86400000);
 
     if (hannukkahDay < -1) {
-      document.getElementById("heading").innerHTML = -hannukkahDay + " days before Hanukkah.";
+      document.getElementById("heading").innerHTML = 1-hannukkahDay + " days before Hanukkah.";
     } else if (hannukkahDay == -1) {
-      document.getElementById("heading").innerHTML = -hannukkahDay + " day before Hanukkah.";
+      document.getElementById("heading").innerHTML = 1-hannukkahDay + " day before Hanukkah.";
     } else if (hannukkahDay == 0) {
       document.getElementById("heading").innerHTML = "It is a Hanukkah eve!";
     } else if (hannukkahDay == 1) {
