@@ -4,7 +4,7 @@ const hannukkahFirstDayDate = 11;
 
 function scale() {
   menorah = document.getElementById("menorah");
-  menorah.style.transform='translateX(-50%) translateY(-50%) scale(' + 1/Math.max(menorah.clientWidth/window.innerWidth, menorah.clientHeight/window.innerHeight) + ')';
+  menorah.style.transform='translateX(-50%) translateY(-50%) scale(' + 1/Math.max((menorah.clientWidth+100)/window.innerWidth, menorah.clientHeight/window.innerHeight) + ')';
 }
 
 function light() {
@@ -15,7 +15,7 @@ function light() {
   var lon = 35.217018;
   hanukkahFirstDayTime = new Date(SunCalc.getTimes(hanukkahFirstDayTime, lat, lon).sunset.getTime() - 18*60000);
 
-  setTimeout(function(){ setLight(); }, 10000);
+  setTimeout(function(){ setLight(); }, 1000);
   setInterval(function(){ setLight(); }, 60000);
 
   fetch('https://extreme-ip-lookup.com/json/')
@@ -102,6 +102,7 @@ function light() {
 }
 
 window.onresize = scale;
+setTimeout(function(){ light(); }, 1000);
 
 scale();
 light();
