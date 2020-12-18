@@ -109,7 +109,7 @@ function light() {
 }
 
 window.onresize = scale;
-setTimeout(function(){ light(); }, 1000);
+window.onload = scale;
+setTimeout(function(){ scale(); }, 1000);
 
-scale();
 light();
