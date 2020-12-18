@@ -8,7 +8,7 @@ function scale() {
   var ua = navigator.userAgent.toLowerCase();
   var isAndroid = ua.indexOf("android") > -1;
   if(isAndroid) {
-    menorah.style.transform='translateX(-50%) translateY(-50%) scale(' + 0.5/Math.max((menorah.clientWidth+100)/window.innerWidth, menorah.clientHeight/window.innerHeight) + ')';
+    menorah.style.transform='translateX(-50%) translateY(-50%) scale(' + 0.8/Math.max((menorah.clientWidth+100)/window.innerWidth, menorah.clientHeight/window.innerHeight) + ')';
   } else {
     menorah.style.transform='translateX(-50%) translateY(-50%) scale(' + 1/Math.max((menorah.clientWidth+100)/window.innerWidth, menorah.clientHeight/window.innerHeight) + ')';
   }
