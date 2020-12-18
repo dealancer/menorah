@@ -1,4 +1,3 @@
-
 const hannukkahFirstDayYear = 2020;
 const hannukkahFirstDayMonth = 12;
 const hannukkahFirstDayDate = 11;
