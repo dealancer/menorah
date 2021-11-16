@@ -1,6 +1,6 @@
 const hannukkahFirstDayYear = 2020;
-const hannukkahFirstDayMonth = 12;
-const hannukkahFirstDayDate = 11;
+const hannukkahFirstDayMonth = 11;
+const hannukkahFirstDayDate = 29;
 
 function scale() {
   menorah = document.getElementById("menorah");
