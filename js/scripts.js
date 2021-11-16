@@ -1,4 +1,4 @@
-const hannukkahFirstDayYear = 2020;
+const hannukkahFirstDayYear = 2021;
 const hannukkahFirstDayMonth = 11;
 const hannukkahFirstDayDate = 29;
 
