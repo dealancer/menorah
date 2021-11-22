@@ -46,21 +46,21 @@ function light() {
     var hannukkahDay = Math.ceil((currentTime - hanukkahFirstDayTime) / 86400000);
 
     if (hannukkahDay < -1) {
-      document.getElementById("heading").innerHTML = 1-hannukkahDay + " days before Hanukkah.";
+      document.getElementById("heading").innerHTML = 1-hannukkahDay + " days before Chanukah.";
     } else if (hannukkahDay == -1) {
-      document.getElementById("heading").innerHTML = 1-hannukkahDay + " day before Hanukkah.";
+      document.getElementById("heading").innerHTML = 1-hannukkahDay + " day before Chanukah.";
     } else if (hannukkahDay == 0) {
-      document.getElementById("heading").innerHTML = "It is a Hanukkah eve!";
+      document.getElementById("heading").innerHTML = "Chag Chanukah Sameach! Today is a Chanukah eve!";
     } else if (hannukkahDay == 1) {
-      document.getElementById("heading").innerHTML = "It is " + hannukkahDay + "st day of Hanukkah!";
+      document.getElementById("heading").innerHTML = "Chag Chanukah Sameach! Today is " + hannukkahDay + "st day of Chanukah!";
     } else if (hannukkahDay == 2) {
-      document.getElementById("heading").innerHTML = "It is " + hannukkahDay + "nd day of Hanukkah!";
+      document.getElementById("heading").innerHTML = "Chag Chanukah Sameach! Today is " + hannukkahDay + "nd day of Chanukah!";
     } else if (hannukkahDay == 3) {
-      document.getElementById("heading").innerHTML = "It is " + hannukkahDay + "rd day of Hanukkah!";
+      document.getElementById("heading").innerHTML = "Chag Chanukah Sameach! Today is " + hannukkahDay + "rd day of Chanukah!";
     } else if (hannukkahDay <= 8) {
-      document.getElementById("heading").innerHTML = "It is " + hannukkahDay + "th day of Hanukkah!";
+      document.getElementById("heading").innerHTML = "Chag Chanukah Sameach! Today is " + hannukkahDay + "th day of Chanukah!";
     } else {
-      document.getElementById("heading").innerHTML = "Hanukkah has ended. See you next year!";
+      document.getElementById("heading").innerHTML = "Chanukah has ended. See you next year!";
     }
 
     document.getElementById("one").style.visibility = "hidden";
