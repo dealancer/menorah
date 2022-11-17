@@ -1,6 +1,6 @@
-const hannukkahFirstDayYear = 2021;
-const hannukkahFirstDayMonth = 11;
-const hannukkahFirstDayDate = 29;
+const hannukkahFirstDayYear = 2022;
+const hannukkahFirstDayMonth = 12;
+const hannukkahFirstDayDate = 8;
 
 function scale() {
   menorah = document.getElementById("menorah");
