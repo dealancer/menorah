@@ -1,6 +1,6 @@
 const hannukkahFirstDayYear = 2022;
 const hannukkahFirstDayMonth = 12;
-const hannukkahFirstDayDate = 8;
+const hannukkahFirstDayDate = 19; // Day after eve
 
 function scale() {
   menorah = document.getElementById("menorah");
