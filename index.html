@@ -19,14 +19,18 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/styles.css?v=1.1">
+  <link rel="stylesheet" href="css/styles.css?4">
   <script src="lib/suncalc/suncalc.js"></script> 
 </head>
 
 <body>
+  <div id="snow"></div>
+
   <iframe class="youtube-frame" src="https://www.youtube.com/embed/mwO0LFGLHUU?autoplay=1&loop=1&controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   <div class="container">
-    <h1 id="heading">loading...</h1>
+    <marquee scrollamount="8">
+      <h1 id="heading">loading...</h1>
+    </marquee>
     <div id="menorah" class="menorah">
       <div id="nine" class="light nine">
         <div class="red flame"></div>
@@ -93,7 +97,8 @@
     </div>
   </div>
 
-  <script src="js/scripts.js?3"></script>
+  <script src="lib/animated-snowfall-effect/PureSnow.js"></script>
+  <script src="js/scripts.js?4"></script>
 </body>
 </html>
 

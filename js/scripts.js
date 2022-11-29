@@ -44,23 +44,26 @@ function light() {
   function setLight() {
     var currentTime = new Date();
     var hannukkahDay = Math.ceil((currentTime - hanukkahFirstDayTime) / 86400000);
-
+    var hashTag = "<a href='https://twitter.com/search?q=%23chanukah&src=typed_query&f=top' target='_blank'>#chanukah</a>. ";
+    var localEvents = "<a href='https://www.chabad.org/holidays/chanukah/Lighting_listing_cdo/aid/103839/jewish/Chanukah-Event-Directory.htm' target='_blank'>Find local</a> Chanukah events near you. ";
+    var eachDay = "Visit this page and see a new light fired up each day. ";
+    var celebrate = "Let's celebrate!";
     if (hannukkahDay < -1) {
-      document.getElementById("heading").innerHTML = 1-hannukkahDay + " days before Chanukah.";
+      document.getElementById("heading").innerHTML = 1-hannukkahDay + " days before Chanukah! " + hashTag + eachDay + localEvents;
     } else if (hannukkahDay == -1) {
-      document.getElementById("heading").innerHTML = 1-hannukkahDay + " day before Chanukah.";
+      document.getElementById("heading").innerHTML = 1-hannukkahDay + " day before Chanukah!" + hashTag + eachDay + localEvents;
     } else if (hannukkahDay == 0) {
-      document.getElementById("heading").innerHTML = "Chag Chanukah Sameach! Today is a Chanukah eve!";
+      document.getElementById("heading").innerHTML = "Chag Chanukah Sameach! Today is a Chanukah eve!" + celebrate + hashTag + localEvents;
     } else if (hannukkahDay == 1) {
-      document.getElementById("heading").innerHTML = "Chag Chanukah Sameach! Today is " + hannukkahDay + "st day of Chanukah!";
+      document.getElementById("heading").innerHTML = "Chag Chanukah Sameach! Today is " + hannukkahDay + "st day of Chanukah!" + celebrate + hashTag + localEvents;
     } else if (hannukkahDay == 2) {
-      document.getElementById("heading").innerHTML = "Chag Chanukah Sameach! Today is " + hannukkahDay + "nd day of Chanukah!";
+      document.getElementById("heading").innerHTML = "Chag Chanukah Sameach! Today is " + hannukkahDay + "nd day of Chanukah!" + celebrate + hashTag + localEvents;
     } else if (hannukkahDay == 3) {
-      document.getElementById("heading").innerHTML = "Chag Chanukah Sameach! Today is " + hannukkahDay + "rd day of Chanukah!";
+      document.getElementById("heading").innerHTML = "Chag Chanukah Sameach! Today is " + hannukkahDay + "rd day of Chanukah!" + celebrate + hashTag + localEvents;
     } else if (hannukkahDay <= 8) {
-      document.getElementById("heading").innerHTML = "Chag Chanukah Sameach! Today is " + hannukkahDay + "th day of Chanukah!";
+      document.getElementById("heading").innerHTML = "Chag Chanukah Sameach! Today is " + hannukkahDay + "th day of Chanukah!" + celebrate + hashTag + localEvents;
     } else {
-      document.getElementById("heading").innerHTML = "Chanukah has ended. See you next year!";
+      document.getElementById("heading").innerHTML = "Chanukah has ended. See you next year! " + hashTag;
     }
 
     document.getElementById("one").style.visibility = "hidden";
@@ -109,7 +112,14 @@ function light() {
 }
 
 window.onresize = scale;
-window.onload = scale;
 setTimeout(function(){ scale(); }, 1000);
+
+var prev_onload_handler = window.onload;
+window.onload = function () {
+    if (prev_onload_handler) {
+      prev_onload_handler();
+    }
+    scale()
+};
 
 light();
